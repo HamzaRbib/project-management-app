@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./sidebar.css";
 import { FaUsers } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
-import Modal from "../Modal/Modal";
+import Modal from "../Modals/TeamsModal/Modal";
 
 function Sidebar({ teams, setTeams }) {
   const [isActiveModal, setIsActiveModal] = useState(false);
