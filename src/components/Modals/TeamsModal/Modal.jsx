@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import "./modal.css";
 
-function Modal({ setIsActiveModal, teams, setTeams }) {
+function Modal({ setIsActiveModal, teams, setTeams, setCurrentTeam }) {
   const [teamName, setTeamName] = useState("");
   const [teamDesciption, setTeamDescription] = useState("");
   function handleClick(e) {
     e.preventDefault();
-    setIsActiveModal(false)
-    setTeams([...teams, {name: teamName, description: teamDesciption}])
+    setIsActiveModal(false);
+    setTeams([
+      ...teams,
+      { name: teamName, description: teamDesciption, todos: [] },
+    ]);
+    setCurrentTeam({ name: teamName, description: teamDesciption, todos: [] });
   }
   return (
     <div className="modal">
       <div className="modal_content">
-        <p>Add a team</p>
+        <p>Add a new team</p>
         <form onSubmit={handleClick}>
           <input
             type="text"

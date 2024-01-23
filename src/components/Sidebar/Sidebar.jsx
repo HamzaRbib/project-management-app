@@ -4,7 +4,7 @@ import { FaUsers } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import Modal from "../Modals/TeamsModal/Modal";
 
-function Sidebar({ teams, setTeams }) {
+function Sidebar({ teams, setTeams, currentTeam, setCurrentTeam }) {
   const [isActiveModal, setIsActiveModal] = useState(false);
   return (
     <>
@@ -20,8 +20,8 @@ function Sidebar({ teams, setTeams }) {
           />
         </div>
         <hr />
-        {teams.map((team) => {
-          return <li>{team.name}</li>;
+        {teams.map((team, index) => {
+          return <p key={index} className={`created_team ${team.name === currentTeam.name ? "selected_team" : ""}`} onClick={() => setCurrentTeam(team)}>{team.name}</p>;
         })}
       </aside>
       {isActiveModal && (
@@ -29,6 +29,7 @@ function Sidebar({ teams, setTeams }) {
           setIsActiveModal={setIsActiveModal}
           teams={teams}
           setTeams={setTeams}
+          setCurrentTeam={setCurrentTeam}
         />
       )}
     </>

@@ -9,25 +9,43 @@
     align-items: center;
 }
 
-/* .card:nth-child(1){
-    border: 2px solid red;
-}
-.card:nth-child(2){
-    border: 2px solid blue;
-}
-.card:nth-child(3){
-    border: 2px solid green;
-} */
-
 .card .title{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .add_btn{
+    position: absolute;
     display: flex;
     gap: 5px;
-    align-self: flex-start;
+    left: 10px;
     margin-left: 15px;
     color: rgb(93, 143, 18);
+    cursor: pointer;
+}
+
+.todo{
+    border: 1px dashed red;
+    padding: 1rem 1rem 0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.todo button{
+    border: none;
+    border-radius: 10px;
+    padding: 8px 10px;
+    margin: 5px;
+}
+
+.edit_btn{
+    background-color: rgba(56, 56, 240, 0.856);
+}
+
+.delete_btn{
+    background-color: crimson;
+}
+
+.todo button:hover{
+    opacity: 0.9;
     cursor: pointer;
 }

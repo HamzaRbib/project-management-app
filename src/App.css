@@ -5,3 +5,20 @@
     left: 15vw;
     margin: 2rem;
 }
+
+.add_new_team{
+    display: flex;
+    border: 2px dashed black;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add_new_team:hover{
+    border: 2px dashed green;
+    color: green;
+    transition: 0.3s;
+}

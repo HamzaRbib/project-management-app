@@ -28,10 +28,22 @@
     cursor: pointer;
 }
 
-.sidebar li{
-    margin: 1rem;
+.created_team{
     text-transform: capitalize;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:azure;
     cursor: pointer;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.selected_team{
+    text-transform: capitalize;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    background-color: aliceblue;
+    color: black;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 0 20px 20px 0;
 }
